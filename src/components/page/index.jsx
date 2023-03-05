@@ -17,18 +17,14 @@ import { Logos } from '../logo'
 export default function Home (){ 
     
     const [Request,setRequest]= useState([]) 
-    const [value,setvalue] = useState()
     const [anime,setanime] =useState()
    
     const HandleChangeValue = (e) => {  
-         setvalue(e.target.value) 
+         setanime(e.target.value.toLowerCase())
     }
    
     const HandleInputValue = async ()=> {
-        
-        let SeachValue = value
-        setanime(SeachValue.toLowerCase())
-
+        console.log(anime)
         HandleSeach()
     }
    
