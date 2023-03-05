@@ -1,4 +1,4 @@
-import React, { useState ,lazy,Suspense} from 'react'
+import React, { useState} from 'react'
 
 import { Results } from '../results'
 import { Seach } from '../seach'
