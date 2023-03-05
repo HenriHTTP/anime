@@ -4,7 +4,7 @@ import {
     ImgCard,
     Title,
     TitleDiv,
-    Stars
+    Stars,
 } from '../global/'
 
 import {AiOutlineStar} from 'react-icons/ai'

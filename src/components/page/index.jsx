@@ -3,6 +3,7 @@ import React, { useState} from 'react'
 import { Results } from '../results'
 import { Seach } from '../seach'
 import { Load } from '../loadding'
+import { NotSeach } from '../NotSeach'
 
 import APi from '../../APi/APi'
 
@@ -72,17 +73,25 @@ export default function Home (){
                 </>
             )}
             {Object.keys(Request).length < 2 &&(
-                <></>
+                <>
+                <NotSeach/>
+                </>
             )}
 
-            {Object.keys(Request).length > 2 &&  Request.map( args => <Results key={args.id} id={args.id} title={args.attributes.canonicalTitle} img={args.attributes.posterImage.small} stars={args.attributes.averageRating}/> )        
+            {Object.keys(Request).length > 2 &&  Request.map( args => (
+            <>
+            <Results key={args.id} id={args.id} title={args.attributes.canonicalTitle} img={args.attributes.posterImage.small} stars={args.attributes.averageRating}/>
+            
+            </>
+            
+
+            ) )        
             
             }
             
         </ContainerResults>
         
-        
-
+            
       
     
         </>

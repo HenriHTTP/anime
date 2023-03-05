@@ -127,3 +127,32 @@ export const LogoDiv = styled.div `
     flex-direction:row; 
     justify-content:space-around;
 `
+export const ButtonLink = styled.button`
+    width:200px;
+    color:black;
+    margin:auto;
+`
+export const GifDiv = styled.div`
+     width: 900px;
+     height:500px;
+     display:flex; 
+     justify-content:center; 
+     flex-direction:column; 
+     margin:auto;
+`
+export const GifImg = styled.img`
+     width: 300px;
+     height:200px;
+     margin:auto;
+`
+export const GifMsg= styled.h1`
+     width: 300px;
+     margin:auto; 
+     font-size:1.5em;
+     color:black;
+     text-align:center;
+`
+export const ContainerGif = styled.div`
+    display:block; 
+    margin:auto;
+`
