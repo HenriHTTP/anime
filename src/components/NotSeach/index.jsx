@@ -17,7 +17,7 @@ export const NotSeach = () => {
         <GifDiv> 
         <ContainerGif>
              <GifImg src={Gif} alt='gif'/>
-            <GifMsg> Made your Search ... </GifMsg>
+            <GifMsg> Do your Search ... </GifMsg>
         </ContainerGif>
            
         </GifDiv>
