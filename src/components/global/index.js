@@ -156,3 +156,23 @@ export const ContainerGif = styled.div`
     display:block; 
     margin:auto;
 `
+export const Atributes = styled.div `
+    margin:auto;
+    width:250px;
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row;
+`
+export const AtributesButton = styled.button `
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    background:#3e509d;
+    border-radius:5px; 
+    font-size:1em; 
+    text-align:center; 
+    color:whitesmoke;
+    border:2px solid whitesmoke;
+    padding:5px;
+`

@@ -30,19 +30,28 @@ export default function Home (){
    
     const  HandleSeach =  async () => { 
         if (anime === ''){ 
+            
+            alert('vazion')
             return
         }
         if (anime === undefined){ 
-            return 
+            alert('vazion')
+            return
+        }
+        if (anime === ' '){ 
+            alert('vazion')
+            return
         }
         try{
             const response =  await APi.get(`/anime?filter[text]=${anime}`)
+            console.log(response.data.data)
             setRequest(response.data.data)
         
             
          
         }catch(error){ 
-        
+            
+            console.log(error)
            
         }
       
@@ -52,7 +61,7 @@ export default function Home (){
          
         <NavBar>
             <LogoDiv>
-            <Logos/>
+            <Logos func={() => window.location.reload(true)}/>
             <Seach  change={HandleChangeValue}  func={HandleInputValue}/>
             </LogoDiv>
         
@@ -76,7 +85,7 @@ export default function Home (){
 
             {Object.keys(Request).length > 2 &&  Request.map( args => (
             <>
-            <Results key={args.id} id={args.id} title={args.attributes.canonicalTitle} img={args.attributes.posterImage.small} stars={args.attributes.averageRating}/>
+            <Results key={args.id} id={args.id} title={args.attributes.canonicalTitle} img={args.attributes.posterImage.small} stars={args.attributes.averageRating} years={args.attributes.startDate} complet={args.attributes.status} type={args.attributes.showType}/>
             
             </>
             

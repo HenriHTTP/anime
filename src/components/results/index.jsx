@@ -5,17 +5,27 @@ import {
     Title,
     TitleDiv,
     Stars,
+    Atributes,
+    AtributesButton
 } from '../global/'
 
 import {AiOutlineStar} from 'react-icons/ai'
 
-export const Results = ({id,title,img,stars}) => {
+export const Results = ({id,title,img,stars,years,complet,type}) => {
     return(
         <>
             <Card key={id}> 
             <TitleDiv> 
                 <Title>{title}</Title>
             </TitleDiv>
+                <Atributes>
+                <AtributesButton>{years}</AtributesButton>
+                <AtributesButton>{type}</AtributesButton>
+                <AtributesButton>{complet}</AtributesButton>
+                
+                    
+                
+                </Atributes>
                 
                 <ImgCard src={img} alt={id} />
 

@@ -6,10 +6,10 @@ import {
 
 import {SiMyanimelist} from 'react-icons/si'
 
-export const Logos = () => { 
+export const Logos = ({func}) => { 
     return( 
         <> 
-         <Logo> <SiMyanimelist/> </Logo>
+         <Logo onClick={func}> <SiMyanimelist/> </Logo>
         </>
     )
 }
