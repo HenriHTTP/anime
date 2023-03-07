@@ -3,8 +3,8 @@ import React, { useState} from 'react'
 import { Results } from '../results'
 import { Seach } from '../seach'
 import { Load } from '../loadding'
-import { NotSeach } from '../NotSeach'
 import { Adventure } from '../Adventure'
+import { CategoriesHome } from '../Categories'
 
 
 import APi from '../../APi/APi'
@@ -108,38 +108,8 @@ export default function Home (){
                 </>
             )}
             
-        
-          {anime !== '' && !Request &&(
-                <>
-                  <Load/>
-                </>
-           )}
 
-
-
-        <CategoriesDiv> 
-            <CategoriesButton value={'action'} onClick={HandleCategoriesHome}>action</CategoriesButton>
-            <CategoriesButton value={'adventure'} onClick={HandleCategoriesHome}>adventure</CategoriesButton>
-            <CategoriesButton value={'angst'} onClick={HandleCategoriesHome}>angst</CategoriesButton>
-            <CategoriesButton value={'anthropomorphism'} onClick={HandleCategoriesHome} >anthropomorphism</CategoriesButton>
-            <CategoriesButton value={'blackmail'} onClick={HandleCategoriesHome} > blackmail</CategoriesButton>
-            <CategoriesButton value={'comedy'} onClick={HandleCategoriesHome} >comedy</CategoriesButton>
-            <CategoriesButton value={'drama'} onClick={HandleCategoriesHome} >drama</CategoriesButton>
-            <CategoriesButton value={'detective'} onClick={HandleCategoriesHome}>detective</CategoriesButton>
-            <CategoriesButton value={'fantasy'} onClick={HandleCategoriesHome}>fantasy</CategoriesButton>
-            <CategoriesButton value={'ghost'} onClick={HandleCategoriesHome}>ghost</CategoriesButton>
-            <CategoriesButton value={'harem'} onClick={HandleCategoriesHome}>harem</CategoriesButton>
-            <CategoriesButton value={'horror'} onClick={HandleCategoriesHome}>horror</CategoriesButton>
-            <CategoriesButton value={'ecchi'} onClick={HandleCategoriesHome}>ecchi</CategoriesButton>
-            <CategoriesButton value={'mystery'} onClick={HandleCategoriesHome}>mystery</CategoriesButton>
-            <CategoriesButton value={'parasite'} onClick={HandleCategoriesHome}>parasite</CategoriesButton>
-            <CategoriesButton value={'romance'} onClick={HandleCategoriesHome}>romance</CategoriesButton>
-            <CategoriesButton value={'thriller'} onClick={HandleCategoriesHome}>thriller</CategoriesButton>
-            <CategoriesButton value={'vampire'} onClick={HandleCategoriesHome}>vampire</CategoriesButton>
-            <CategoriesButton  value={'zombie'} onClick={HandleCategoriesHome}>zombie</CategoriesButton>
-            <CategoriesButton value={'shoujo'} onClick={HandleCategoriesHome}>shoujo</CategoriesButton>
-            <CategoriesButton value={'shounen'} onClick={HandleCategoriesHome}>shounen</CategoriesButton>
-        </CategoriesDiv>
+        <CategoriesHome func={HandleCategoriesHome}/>
             
             {Object.keys(Request).length < 2 &&(
                 <>

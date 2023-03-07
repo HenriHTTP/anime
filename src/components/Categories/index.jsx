@@ -4,31 +4,32 @@ import {
     CategoriesButton
 } from '../global'
 
-export const Categories =()=> { 
+export const CategoriesHome =({func})=> { 
     return(
         <> 
-        <CategoriesDiv> 
-            <CategoriesButton>action</CategoriesButton>
-            <CategoriesButton>adventure</CategoriesButton>
-            <CategoriesButton>angst</CategoriesButton>
-            <CategoriesButton>anthropomorphism</CategoriesButton>
-            <CategoriesButton>blackmail</CategoriesButton>
-            <CategoriesButton>comedy</CategoriesButton>
-            <CategoriesButton>drama</CategoriesButton>
-            <CategoriesButton>detective</CategoriesButton>
-            <CategoriesButton>fantasy</CategoriesButton>
-            <CategoriesButton>ghost</CategoriesButton>
-            <CategoriesButton>harem</CategoriesButton>
-            <CategoriesButton>horror</CategoriesButton>
-            <CategoriesButton>ecchi</CategoriesButton>
-            <CategoriesButton>mystery</CategoriesButton>
-            <CategoriesButton>parasite</CategoriesButton>
-            <CategoriesButton>romance</CategoriesButton>
-            <CategoriesButton>thriller</CategoriesButton>
-            <CategoriesButton>vampire</CategoriesButton>
-            <CategoriesButton>zombie</CategoriesButton>
-            <CategoriesButton>shoujo</CategoriesButton>
-            <CategoriesButton>shounen</CategoriesButton>
+   
+   <CategoriesDiv> 
+            <CategoriesButton value={'action'} onClick={func}>action</CategoriesButton>
+            <CategoriesButton value={'adventure'} onClick={func}>adventure</CategoriesButton>
+            <CategoriesButton value={'angst'} onClick={func}>angst</CategoriesButton>
+            <CategoriesButton value={'anthropomorphism'} onClick={func} >anthropomorphism</CategoriesButton>
+            <CategoriesButton value={'blackmail'} onClick={func} > blackmail</CategoriesButton>
+            <CategoriesButton value={'comedy'} onClick={func} >comedy</CategoriesButton>
+            <CategoriesButton value={'drama'} onClick={func} >drama</CategoriesButton>
+            <CategoriesButton value={'detective'} onClick={func}>detective</CategoriesButton>
+            <CategoriesButton value={'fantasy'} onClick={func}>fantasy</CategoriesButton>
+            <CategoriesButton value={'ghost'} onClick={func}>ghost</CategoriesButton>
+            <CategoriesButton value={'harem'} onClick={func}>harem</CategoriesButton>
+            <CategoriesButton value={'horror'} onClick={func}>horror</CategoriesButton>
+            <CategoriesButton value={'ecchi'} onClick={func}>ecchi</CategoriesButton>
+            <CategoriesButton value={'mystery'} onClick={func}>mystery</CategoriesButton>
+            <CategoriesButton value={'parasite'} onClick={func}>parasite</CategoriesButton>
+            <CategoriesButton value={'romance'} onClick={func}>romance</CategoriesButton>
+            <CategoriesButton value={'thriller'} onClick={func}>thriller</CategoriesButton>
+            <CategoriesButton value={'vampire'} onClick={func}>vampire</CategoriesButton>
+            <CategoriesButton  value={'zombie'} onClick={func}>zombie</CategoriesButton>
+            <CategoriesButton value={'shoujo'} onClick={func}>shoujo</CategoriesButton>
+            <CategoriesButton value={'shounen'} onClick={func}>shounen</CategoriesButton>
         </CategoriesDiv>
         </>
     )
