@@ -181,3 +181,22 @@ export const SeachP =  styled.p `
     font-size:1.3em; 
     text-align: left;
 `
+export const CategoriesDiv =  styled.div `
+    width:900px; 
+    display:flex; 
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap:wrap; 
+    margin-top:20px;
+
+`
+export const CategoriesButton =  styled.button `
+    display:flex; 
+    justify-content:center;
+    margin:auto;
+    font-size: 1em;
+    text-align: center;
+    border:solid 1px gray; 
+    border-radius:10px; 
+    margin-left:10px;
+`

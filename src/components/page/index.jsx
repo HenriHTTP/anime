@@ -6,6 +6,7 @@ import { Load } from '../loadding'
 import { NotSeach } from '../NotSeach'
 import { Adventure } from '../Adventure'
 
+
 import APi from '../../APi/APi'
 
 import { 
@@ -13,8 +14,11 @@ import {
     NavBar,
     LogoDiv,
     SeachP,
+    CategoriesDiv,
+    CategoriesButton
 } from '../global'
 import { Logos } from '../logo'
+import { Categories } from '../Categories'
 
 export default function Home (){ 
     
@@ -61,6 +65,26 @@ export default function Home (){
       
     }
 
+    const HandleCategoriesHome =  async (args) => { 
+        
+       const Categories = args.target.value    
+         try{
+            console.log(args)
+            const response =  await APi.get(`/anime?filter[categories]=${Categories}`)
+
+            console.log(response.data.data)
+            setRequest(response.data.data)
+         
+        }catch(error){ 
+            
+            console.log(error)
+           
+        }
+      
+    }
+     const msg = () => { 
+        alert('clicked')
+     }
 
     return( 
         <>
@@ -75,7 +99,7 @@ export default function Home (){
            
          
         <ContainerResults>
-         
+            
             
             {Object.keys(Request).length > 2 &&(
                 <>
@@ -97,6 +121,31 @@ export default function Home (){
            )
 
            }
+
+
+        <CategoriesDiv> 
+            <CategoriesButton value={'action'} onClick={HandleCategoriesHome}>action</CategoriesButton>
+            <CategoriesButton value={'adventure'} onClick={HandleCategoriesHome}>adventure</CategoriesButton>
+            <CategoriesButton value={'angst'} onClick={HandleCategoriesHome}>angst</CategoriesButton>
+            <CategoriesButton value={'anthropomorphism'} onClick={HandleCategoriesHome} >anthropomorphism</CategoriesButton>
+            <CategoriesButton value={'blackmail'} onClick={HandleCategoriesHome} > blackmail</CategoriesButton>
+            <CategoriesButton value={'comedy'} onClick={HandleCategoriesHome} >comedy</CategoriesButton>
+            <CategoriesButton value={'drama'} onClick={HandleCategoriesHome} >drama</CategoriesButton>
+            <CategoriesButton value={'detective'} onClick={HandleCategoriesHome}>detective</CategoriesButton>
+            <CategoriesButton value={'fantasy'} onClick={HandleCategoriesHome}>fantasy</CategoriesButton>
+            <CategoriesButton value={'ghost'} onClick={HandleCategoriesHome}>ghost</CategoriesButton>
+            <CategoriesButton value={'harem'} onClick={HandleCategoriesHome}>harem</CategoriesButton>
+            <CategoriesButton value={'horror'} onClick={HandleCategoriesHome}>horror</CategoriesButton>
+            <CategoriesButton value={'ecchi'} onClick={HandleCategoriesHome}>ecchi</CategoriesButton>
+            <CategoriesButton value={'mystery'} onClick={HandleCategoriesHome}>mystery</CategoriesButton>
+            <CategoriesButton value={'parasite'} onClick={HandleCategoriesHome}>parasite</CategoriesButton>
+            <CategoriesButton value={'romance'} onClick={HandleCategoriesHome}>romance</CategoriesButton>
+            <CategoriesButton value={'thriller'} onClick={HandleCategoriesHome}>thriller</CategoriesButton>
+            <CategoriesButton value={'vampire'} onClick={HandleCategoriesHome}>vampire</CategoriesButton>
+            <CategoriesButton  value={'zombie'} onClick={HandleCategoriesHome}>zombie</CategoriesButton>
+            <CategoriesButton value={'shoujo'} onClick={HandleCategoriesHome}>shoujo</CategoriesButton>
+            <CategoriesButton value={'shounen'} onClick={HandleCategoriesHome}>shounen</CategoriesButton>
+        </CategoriesDiv>
             
             {Object.keys(Request).length < 2 &&(
                 <>

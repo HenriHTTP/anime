@@ -1,7 +1,7 @@
 
 
 import Home from './components/page/index';
-import { Adventure } from './components/Adventure';
+import { Categories } from './components/Categories';
 
 function App() {
   return (
