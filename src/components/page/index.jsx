@@ -4,6 +4,7 @@ import { Results } from '../results'
 import { Seach } from '../seach'
 import { Load } from '../loadding'
 import { NotSeach } from '../NotSeach'
+import { Adventure } from '../Adventure'
 
 import APi from '../../APi/APi'
 
@@ -11,6 +12,7 @@ import {
     ContainerResults,
     NavBar,
     LogoDiv,
+    SeachP,
 } from '../global'
 import { Logos } from '../logo'
 
@@ -18,6 +20,7 @@ export default function Home (){
     
     const [Request,setRequest]= useState([]) 
     const [anime,setanime] =useState()
+    const [ResultsSeach , SetResultsSeach] = useState()
    
     const HandleChangeValue = (e) => {  
          setanime(e.target.value.toLowerCase())
@@ -25,6 +28,7 @@ export default function Home (){
    
     const HandleInputValue = async ()=> {
         console.log(anime)
+        SetResultsSeach(anime)
         HandleSeach()
     }
    
@@ -56,6 +60,8 @@ export default function Home (){
         }
       
     }
+
+
     return( 
         <>
          
@@ -71,17 +77,32 @@ export default function Home (){
         <ContainerResults>
          
             
-
-            {anime !== '' && !Request &&(
+            {Object.keys(Request).length > 2 &&(
+                <>
+                    <SeachP> Showing results for {ResultsSeach}</SeachP>
+                </>
+            )}
+            
+        
+          {anime !== '' && !Request &&(
                 <>
                   <Load/>
                 </>
-            )}
+           )}
+
+           { anime === undefined && (
+           <>
+            <NotSeach/>
+           </>
+           )
+
+           }
+            
             {Object.keys(Request).length < 2 &&(
                 <>
-                <NotSeach/>
-                </>
-            )}
+                <Adventure/>
+               </>
+           )}
 
             {Object.keys(Request).length > 2 &&  Request.map( args => (
             <>

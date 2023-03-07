@@ -134,7 +134,6 @@ export const ButtonLink = styled.button`
 `
 export const GifDiv = styled.div`
      width: 900px;
-     height:500px;
      display:flex; 
      justify-content:center; 
      flex-direction:column; 
@@ -175,4 +174,10 @@ export const AtributesButton = styled.button `
     color:whitesmoke;
     border:2px solid whitesmoke;
     padding:5px;
+`
+export const SeachP =  styled.p ` 
+    width:900px; 
+    margin:auto;   
+    font-size:1.3em; 
+    text-align: left;
 `
