@@ -68,11 +68,13 @@ export default function Home (){
 
     const HandleCategoriesHome =  async (args) => { 
         
-        SetCategories(args.target.value  )   
+        SetCategories(args.target.value)  
+        
+        const categories = args.target.value
          
         try{
             console.log(args)
-            const response =  await APi.get(`/anime?filter[categories]=${Categories}`)
+            const response =  await APi.get(`/anime?filter[categories]=${categories}`)
 
             console.log(response.data.data)
             setRequest(response.data.data)
