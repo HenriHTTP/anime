@@ -25,6 +25,7 @@ export default function Home (){
     const [Request,setRequest]= useState([]) 
     const [anime,setanime] =useState()
     const [ResultsSeach , SetResultsSeach] = useState()
+    const [Categories, SetCategories] = useState()
    
     const HandleChangeValue = (e) => {  
          setanime(e.target.value.toLowerCase())
@@ -67,8 +68,9 @@ export default function Home (){
 
     const HandleCategoriesHome =  async (args) => { 
         
-       const Categories = args.target.value    
-         try{
+        SetCategories(args.target.value  )   
+         
+        try{
             console.log(args)
             const response =  await APi.get(`/anime?filter[categories]=${Categories}`)
 
@@ -82,10 +84,7 @@ export default function Home (){
         }
       
     }
-     const msg = () => { 
-        alert('clicked')
-     }
-
+    
     return( 
         <>
          
@@ -103,7 +102,7 @@ export default function Home (){
             
             {Object.keys(Request).length > 2 &&(
                 <>
-                    <SeachP> Showing results for {ResultsSeach}</SeachP>
+                    <SeachP> Showing results for { ResultsSeach || Categories}</SeachP>
                 </>
             )}
             
@@ -114,13 +113,6 @@ export default function Home (){
                 </>
            )}
 
-           { anime === undefined && (
-           <>
-            <NotSeach/>
-           </>
-           )
-
-           }
 
 
         <CategoriesDiv> 
