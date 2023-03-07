@@ -180,6 +180,7 @@ export const SeachP =  styled.p `
     margin:auto;   
     font-size:1.3em; 
     text-align: left;
+    padding-left:20px;
 `
 export const CategoriesDiv =  styled.div `
     width:900px; 
