@@ -2,7 +2,6 @@ import React, { useState} from 'react'
 
 import { Results } from '../results'
 import { Seach } from '../seach'
-import { Load } from '../loadding'
 import { Adventure } from '../Adventure'
 import { CategoriesHome } from '../Categories'
 
@@ -14,11 +13,8 @@ import {
     NavBar,
     LogoDiv,
     SeachP,
-    CategoriesDiv,
-    CategoriesButton
 } from '../global'
 import { Logos } from '../logo'
-import { Categories } from '../Categories'
 
 export default function Home (){ 
     

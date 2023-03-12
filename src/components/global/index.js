@@ -16,12 +16,19 @@ export const Card =  styled.div`
     :hover { 
         scale: 0.9;
     };
+    @media screen and (max-width: 629px) {
+        width: 250px;
+    }
 
 `
 export const ImgCard = styled.img `
     width:200px; 
     height: 300px;
     margin:auto;
+    @media screen and (max-width: 629px) {
+        width: 180px;
+        height: 280px;
+    }
 `
 export const Title = styled.h1`
     width:200px; 
@@ -29,6 +36,10 @@ export const Title = styled.h1`
     font-size:1.2em;
     text-align: center;
     color:black; 
+    @media screen and (max-width: 629px) {
+        width: 180px;
+        font-size: 1em;
+    }
 `
 export const SeachInput = styled.input` 
     width:90%; 
@@ -51,6 +62,10 @@ export const SeachButton = styled.button`
     border:none;
     display: flex;
     justify-content:center; 
+    @media screen and (max-width: 629px) {
+        width:30px;
+        font-size: 1.5em;
+    }
    
 `
 export const SeachDiv =  styled.div`
@@ -60,6 +75,9 @@ export const SeachDiv =  styled.div`
     background-color:white;   
     border-radius:10px;
     margin:auto;
+    @media screen and (max-width: 629px) {
+        width:230px;
+    }
 `
 export const Container =  styled.div`
     width:100vw; 
@@ -77,6 +95,13 @@ export const ContainerResults = styled.div `
     flex-wrap:wrap;
     margin-top:20px;
     margin-bottom:40px;
+    @media screen and (max-width: 629px) {
+    width: 300px;
+    }
+    @media (min-width: 630px) and (max-width: 899px) {
+        width: 630px;
+
+    }
 `
 export const NavBar = styled.div`
     width:100vw; 
@@ -85,6 +110,9 @@ export const NavBar = styled.div`
     display:flex;
     flex-direction:row; 
     justify-content:center; 
+    @media screen and (max-width: 629px) {
+        width:100%;
+    }
 `
 export const TitleDiv = styled.div`
     width:100%; 
@@ -120,6 +148,10 @@ export const Logo = styled.button`
     margin: auto;
     display:flex; 
     justify-content:center;
+    @media screen and (max-width: 629px) {
+        font-size: 1.8em;
+    } 
+
 `
 export const LogoDiv = styled.div ` 
     width:900px; 
@@ -161,6 +193,10 @@ export const Atributes = styled.div `
     display:flex;
     justify-content:space-around;
     flex-direction:row;
+    @media screen and (max-width: 629px) {
+        width: 180px;
+        font-size: 1em;
+    }
 `
 export const AtributesButton = styled.button `
     margin:auto;
@@ -200,4 +236,7 @@ export const CategoriesButton =  styled.button `
     border:solid 1px gray; 
     border-radius:10px; 
     margin-left:10px;
+    @media screen and (max-width: 629px) {
+        margin-left:0px;
+    }
 `
